@@ -5,11 +5,11 @@ CREATE TABLE Tmhmata (
     ari8mos_klinwn INT DEFAULT 0 CHECK (ari8mos_klinwn >= 0),
     kthrio_orofos VARCHAR(100),
     
-    amk_diey8ynths CHAR(11) NOT NULL, 
+    amka_diey8ynths CHAR(11) NOT NULL, 
     
     -- Σύνδεση με τον πίνακα prosopiko
     CONSTRAINT fk_tmhma_diey8ynths 
-        FOREIGN KEY (amk_diey8ynths) 
-        REFERENCES Prosopiko(amk) 
+        FOREIGN KEY (amka_diey8ynths) 
+        REFERENCES Prosopiko(amka) 
         ON DELETE RESTRICT -- Απαγορεύει τη διαγραφή του διευθυντή αν δεν αντικατασταθεί
 ) ENGINE=InnoDB;
