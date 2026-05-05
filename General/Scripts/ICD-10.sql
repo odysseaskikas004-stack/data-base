@@ -1,0 +1,4 @@
+CREATE TABLE ICD_10 (
+    kodikos_ICD10 VARCHAR(10) PRIMARY KEY, -- π.χ. A00, B20 κλπ.
+    perigrafi VARCHAR(255) NOT NULL
+) ENGINE=InnoDB;
