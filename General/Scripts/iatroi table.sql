@@ -1,5 +1,5 @@
 CREATE TABLE Iatroi (
-    amka CHAR(11) PRIMARY KEY, -- Το ΑΜΚ είναι το PK και FK ταυτόχρονα
+    amka CHAR(11) PRIMARY KEY, -- Το ΑΜΚA είναι το PK και FK ταυτόχρονα
     ari8mos_adeias VARCHAR(50) NOT NULL,
     eidikotita VARCHAR(100) NOT NULL,
     va8mida VARCHAR(50) NOT NULL 
