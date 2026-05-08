@@ -13,4 +13,4 @@ CREATE TABLE As8eneis (
         FOREIGN KEY (amka) 
         REFERENCES Atoma(amka) 
         ON DELETE CASCADE
-) ENGINE=InnoDB;
+    ) ENGINE=InnoDB;

@@ -1,5 +1,5 @@
 CREATE TABLE Klines (
-    ID_klinis INT AUTO_INCREMENT PRIMARY KEY, -- Μοναδικός αριθμός κλίνης
+    ID_klinis INT AUTO_INCREMENT PRIMARY KEY, 
     typos VARCHAR(50) NOT NULL 
         CHECK (typos IN ('ΜΕΘ', 'μονόκλινο', 'πολύκλινο')),
     katastasi VARCHAR(50) NOT NULL 
