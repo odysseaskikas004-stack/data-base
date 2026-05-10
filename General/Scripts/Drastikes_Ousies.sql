@@ -1,0 +1,4 @@
+CREATE TABLE Drastikes_Ousies (
+    ID_ousias INT AUTO_INCREMENT PRIMARY KEY, 
+    onoma_ousias VARCHAR(255) NOT NULL UNIQUE 
+) ENGINE=InnoDB;
