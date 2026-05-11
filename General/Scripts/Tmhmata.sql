@@ -6,8 +6,7 @@ CREATE TABLE Tmhmata (
     kthrio_orofos VARCHAR(100),
     
     amka_diey8ynths CHAR(11) NOT NULL, 
-    
-    -- Σύνδεση με τον πίνακα prosopiko
+
     CONSTRAINT fk_tmhma_diey8ynths 
         FOREIGN KEY (amka_diey8ynths) 
         REFERENCES Prosopiko(amka) 
