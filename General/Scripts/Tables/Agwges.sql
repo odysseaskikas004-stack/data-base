@@ -1,7 +1,7 @@
 CREATE TABLE Agwges (
     amka_iatrou CHAR(11) NOT NULL,         
     amka_as8eni CHAR(11) NOT NULL,            
-    kwdikos_farmakoy VARCHAR(50) NOT NULL,    
+    kwdikos_farmakou VARCHAR(50) NOT NULL,    
     imerominia_enarxis DATE NOT NULL,         
     
     imerominia_lixis DATE,                    
@@ -9,7 +9,7 @@ CREATE TABLE Agwges (
     syxnotita VARCHAR(255) NOT NULL,          
     ID_nosileias INT NOT NULL,                
 
-    PRIMARY KEY (amka_iatrou, amka_as8eni, kwdikos_farmakoy, imerominia_enarxis),
+    PRIMARY KEY (amka_iatrou, amka_as8eni, kwdikos_farmakou, imerominia_enarxis),
 
     CONSTRAINT fk_agwgi_iatros 
         FOREIGN KEY (amka_iatrou) REFERENCES Iatroi(amka) 
