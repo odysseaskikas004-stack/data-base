@@ -5,4 +5,5 @@ CREATE TABLE Atoma (
     email VARCHAR(100) UNIQUE,
     tilefono VARCHAR(15),
     amka CHAR(11) UNIQUE
+    typos_atomou ENUM('Ιατρός', 'Ασθενής', 'Νοσηλευτής', 'Διοικητικός') NOT NULL;
 ) ENGINE=InnoDB;
