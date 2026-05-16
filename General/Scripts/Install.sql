@@ -1,37 +1,37 @@
 -- TABLES
 SET FOREIGN_KEY_CHECKS = 0;
 
-SOURCE tables/Atoma_Table.sql;
-SOURCE tables/As8eneis.sql;
-SOURCE tables/Drastikes_Ousies.sql;
-SOURCE tables/Farmaka.sql;
-SOURCE tables/ICD-10.sql;
-SOURCE tables/KEN.sql;
-SOURCE tables/Xwroi_Table.sql;
+SOURCE TABLES/Atoma_Table.sql;
+SOURCE TABLES/As8eneis.sql;
+SOURCE TABLES/Drastikes_Ousies.sql;
+SOURCE TABLES/Farmaka.sql;
+SOURCE TABLES/ICD-10.sql;
+SOURCE TABLES/KEN.sql;
+SOURCE TABLES/Xwroi_Table.sql;
 
-SOURCE tables/Prosopiko_Table.sql;
-SOURCE tables/Tmhmata.sql;
-SOURCE tables/Iatroi_Table.sql;
-SOURCE tables/Nosileftes_Table.sql;
-SOURCE tables/Dioikitiko_Prosopiko_Table.sql;
+SOURCE TABLES/Prosopiko_Table.sql;
+SOURCE TABLES/Tmhmata.sql;
+SOURCE TABLES/Iatroi_Table.sql;
+SOURCE TABLES/Nosileftes_Table.sql;
+SOURCE TABLES/Dioikitiko_Prosopiko_Table.sql;
 
-SOURCE tables/Klines_Table.sql;
-SOURCE tables/Vardies.sql;
-SOURCE tables/Efhmeries.sql;
-SOURCE tables/Iatrikes_Praxeis.sql;
-SOURCE tables/Iatroi_kai_Tmhmata.sql;
+SOURCE TABLES/Klines_Table.sql;
+SOURCE TABLES/Vardies.sql;
+SOURCE TABLES/Efhmeries.sql;
+SOURCE TABLES/Iatrikes_Praxeis.sql;
+SOURCE TABLES/Iatroi_kai_Tmhmata.sql;
 
-SOURCE tables/Nosileies.sql;
-SOURCE tables/Iatroi_Nosileias.sql;
-SOURCE tables/Agwges.sql;
-SOURCE tables/Boithoi_Praxeon.sql;
-SOURCE tables/Synthesi_Farmakou.sql;
-SOURCE tables/Allergies_As8enwn.sql;
+SOURCE TABLES/Nosileies.sql;
+SOURCE TABLES/Iatroi_Nosileias.sql;
+SOURCE TABLES/Agwges.sql;
+SOURCE TABLES/Boithoi_Praxeon.sql;
+SOURCE TABLES/Synthesi_Farmakou.sql;
+SOURCE TABLES/Allergies_As8enwn.sql;
 
-SOURCE tables/Axiologisi_Iatrwn.sql;
-SOURCE tables/Axiologisi_Nosileias.sql;
-SOURCE tables/Kostologisi.sql;
-SOURCE tables/Eikones.sql;
+SOURCE TABLES/Axiologisi_Iatrwn.sql;
+SOURCE TABLES/Axiologisi_Nosileias.sql;
+SOURCE TABLES/Kostologisi.sql;
+SOURCE TABLES/Eikones.sql;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
