@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS Efhmeries;
 DROP TABLE IF EXISTS Eikones;
 DROP TABLE IF EXISTS Epeigonta;
 DROP TABLE IF EXISTS Farmaka;
-DROP TABLE IF EXISTS `ICD-10`;
+DROP TABLE IF EXISTS `icd-10`;
 DROP TABLE IF EXISTS Iatrikes_Praxeis;
 DROP TABLE IF EXISTS Iatroi_Nosileias;
 DROP TABLE IF EXISTS Iatroi_Table;
@@ -40,12 +40,20 @@ CREATE TABLE Atoma (
     ilikia INT CHECK (ilikia >= 0 AND ilikia <= 120),
     email VARCHAR(100) UNIQUE,
     tilefono VARCHAR(15),
-    amka CHAR(11) UNIQUE,
+    amka CHAR(11) PRIMARY KEY,
     typos_atomou VARCHAR(20) NOT NULL,
     
     CONSTRAINT chk_typos_atomou 
         CHECK (typos_atomou IN ('Ιατρός', 'Ασθενής', 'Νοσηλευτής', 'Διοικητικός'))
 ) ENGINE=InnoDB;
+
+CREATE TABLE Prosopiko (
+    amka CHAR(11) PRIMARY KEY,
+    imerominia_proslipsis DATE NOT NULL,
+    typos_prosopikou VARCHAR(50) NOT NULL CHECK (typos_prosopikou IN ('Ιατρός', 'Νοσηλευτής', 'Διοικητικό')),	
+    FOREIGN KEY (amka) REFERENCES Atoma(amka) ON DELETE CASCADE  -- το ID atomou ειναι FK που δειχνει στον πινακα Atoma
+) ENGINE=InnoDB;		
+
 
 CREATE TABLE Tmhmata (
     ID_tmhmatos INT PRIMARY KEY,
@@ -83,12 +91,6 @@ CREATE TABLE KEN (
     mesi_diarkeia_nosileias INT NOT NULL 
 ) ENGINE=InnoDB;
 
-CREATE TABLE Prosopiko (
-    amka CHAR(11) PRIMARY KEY,
-    imerominia_proslipsis DATE NOT NULL,
-    typos_prosopikou VARCHAR(50) NOT NULL CHECK (typos_prosopikou IN ('Ιατρός', 'Νοσηλευτής', 'Διοικητικό')),	
-    FOREIGN KEY (amka) REFERENCES Atoma(amka) ON DELETE CASCADE --το ID atomou ειναι FK που δειχνει στον πινακα Atoma
-) ENGINE=InnoDB;		
 
 
 CREATE TABLE As8eneis (
@@ -394,7 +396,7 @@ CREATE TABLE Agwges (
         ON DELETE CASCADE ON UPDATE CASCADE,
 
     CONSTRAINT fk_agwgi_farmako 
-        FOREIGN KEY (kwdikos_farmakoy) REFERENCES Farmaka(kwdikos_farmakoy) 
+        FOREIGN KEY (kwdikos_farmakou) REFERENCES Farmaka(kwdikos_farmakou) 
         ON DELETE RESTRICT ON UPDATE CASCADE,
 
     CONSTRAINT fk_agwgi_nosileia 
