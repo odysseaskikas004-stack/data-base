@@ -1,47 +1,47 @@
--- TABLES
+-- Tables
 SET FOREIGN_KEY_CHECKS = 0;
 
-SOURCE TABLES/Atoma_Table.sql;
-SOURCE TABLES/As8eneis.sql;
-SOURCE TABLES/Drastikes_Ousies.sql;
-SOURCE TABLES/Farmaka.sql;
-SOURCE TABLES/ICD_10.sql;
-SOURCE TABLES/KEN.sql;
-SOURCE TABLES/Xwroi_Table.sql;
+SOURCE Tables/Atoma_Table.sql;
+SOURCE Tables/As8eneis.sql;
+SOURCE Tables/Drastikes_Ousies.sql;
+SOURCE Tables/Farmaka.sql;
+SOURCE Tables/ICD_10.sql;
+SOURCE Tables/KEN.sql;
+SOURCE Tables/Xwroi_Table.sql;
 
-SOURCE TABLES/Prosopiko_Table.sql;
-SOURCE TABLES/Tmhmata.sql;
-SOURCE TABLES/Iatroi_Table.sql;
-SOURCE TABLES/Nosileftes_Table.sql;
-SOURCE TABLES/Dioikitiko_Prosopiko_Table.sql;
+SOURCE Tables/Prosopiko_Table.sql;
+SOURCE Tables/Tmhmata.sql;
+SOURCE Tables/Iatroi_Table.sql;
+SOURCE Tables/Nosileftes_Table.sql;
+SOURCE Tables/Dioikitiko_Prosopiko_Table.sql;
 
-SOURCE TABLES/Klines_Table.sql;
-SOURCE TABLES/Vardies.sql;
-SOURCE TABLES/Efhmeries.sql;
-SOURCE TABLES/Iatrikes_Praxeis.sql;
-SOURCE TABLES/Ergasthriakes_Exetaseis.sql;
-SOURCE TABLES/Iatroi_kai_Tmhmata.sql;
+SOURCE Tables/Klines_Table.sql;
+SOURCE Tables/Vardies.sql;
+SOURCE Tables/Efhmeries.sql;
+SOURCE Tables/Iatrikes_Praxeis.sql;
+SOURCE Tables/Ergasthriakes_Exetaseis.sql;
+SOURCE Tables/Iatroi_kai_Tmhmata.sql;
 
-SOURCE TABLES/Nosileies.sql;
-SOURCE TABLES/Iatroi_Nosileias.sql;
-SOURCE TABLES/Agwges.sql;
-SOURCE TABLES/Boithoi_Praxeon.sql;
-SOURCE TABLES/Synthesi_Farmakou.sql;
-SOURCE TABLES/Allergies_As8enwn.sql;
+SOURCE Tables/Nosileies.sql;
+SOURCE Tables/Iatroi_Nosileias.sql;
+SOURCE Tables/Agwges.sql;
+SOURCE Tables/Boithoi_Praxeon.sql;
+SOURCE Tables/Synthesi_Farmakou.sql;
+SOURCE Tables/Allergies_As8enwn.sql;
 
-SOURCE TABLES/Axiologisi_Iatrwn.sql;
-SOURCE TABLES/Axiologisi_Nosileias.sql;
-SOURCE TABLES/Kostologisi.sql;
-SOURCE TABLES/Eikones.sql;
+SOURCE Tables/Axiologisi_Iatrwn.sql;
+SOURCE Tables/Axiologisi_Nosileias.sql;
+SOURCE Tables/Kostologisi.sql;
+SOURCE Tables/Eikones.sql;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
--- TRIGGERS
-SOURCE TRIGGERS/Periorismoi_Epopteias.sql;
-SOURCE TRIGGERS/Elegxos_Alergias.sql;
-SOURCE TRIGGERS/Oria_Vardiwn.sql;
-SOURCE TRIGGERS/Elegxos_gia_Axiologhsh_Iatrou.sql;
-SOURCE TRIGGERS/Elegxos_gia_Axiologhsh_Noshleias.sql;
+-- Triggers
+SOURCE Triggers/Periorismoi_Epopteias.sql;
+SOURCE Triggers/Elegxos_Alergias.sql;
+SOURCE Triggers/Oria_Vardiwn.sql;
+SOURCE Triggers/Elegxos_gia_Axiologhsh_Iatrou.sql;
+SOURCE Triggers/Elegxos_gia_Axiologhsh_Noshleias.sql;
 
 
-SELECT 'Η εγκατάσταση όλων των πινάκων και των triggers ολοκληρώθηκε!' AS Success_Message;
+SELECT 'Η εγκατάσταση όλων των πινάκων και των Triggers ολοκληρώθηκε!' AS Success_Message;
