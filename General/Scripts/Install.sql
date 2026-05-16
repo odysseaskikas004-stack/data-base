@@ -5,7 +5,7 @@ SOURCE TABLES/Atoma_Table.sql;
 SOURCE TABLES/As8eneis.sql;
 SOURCE TABLES/Drastikes_Ousies.sql;
 SOURCE TABLES/Farmaka.sql;
-SOURCE TABLES/ICD-10.sql;
+SOURCE TABLES/ICD_10.sql;
 SOURCE TABLES/KEN.sql;
 SOURCE TABLES/Xwroi_Table.sql;
 
