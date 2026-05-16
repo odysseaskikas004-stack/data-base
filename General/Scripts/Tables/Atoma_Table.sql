@@ -4,7 +4,7 @@ CREATE TABLE Atoma (
     ilikia INT CHECK (ilikia >= 0 AND ilikia <= 120),
     email VARCHAR(100) UNIQUE,
     tilefono VARCHAR(15),
-    amka CHAR(11) UNIQUE,
+    amka CHAR(11) PRIMARY KEY,
     typos_atomou VARCHAR(20) NOT NULL,
     
     CONSTRAINT chk_typos_atomou 
