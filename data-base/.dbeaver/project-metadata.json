@@ -1,1 +1,1 @@
-{"resources":{"Scripts/atoma table.sql":{"default-datasource":"mariaDB-19daa407a21-5b72201788b78410","default-catalog":"vasi"}}}
+{"resources":{"Scripts/Script.sql":{"default-datasource":"mariaDB-19daa407a21-5b72201788b78410","default-catalog":"vasi"},"Scripts/atoma table.sql":{"default-datasource":"mariaDB-19daa407a21-5b72201788b78410","default-catalog":"vasi"}}}
