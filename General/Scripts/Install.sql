@@ -36,11 +36,11 @@ SOURCE TABLES/Eikones.sql;
 SET FOREIGN_KEY_CHECKS = 1;
 
 -- TRIGGERS
-SOURCE triggers/Periorismoi_Epopteias.sql;
-SOURCE triggers/Elegxos_Alergias.sql;
-SOURCE triggers/Oria_Vardiwn.sql;
-SOURCE triggers/Elegxos_gia_Axiologhsh_Iatrou.sql;
-SOURCE triggers/Elegxos_gia_Axiologhsh_Noshleias.sql;
+SOURCE TRIGGERS/Periorismoi_Epopteias.sql;
+SOURCE TRIGGERS/Elegxos_Alergias.sql;
+SOURCE TRIGGERS/Oria_Vardiwn.sql;
+SOURCE TRIGGERS/Elegxos_gia_Axiologhsh_Iatrou.sql;
+SOURCE TRIGGERS/Elegxos_gia_Axiologhsh_Noshleias.sql;
 
 
 SELECT 'Η εγκατάσταση όλων των πινάκων και των triggers ολοκληρώθηκε!' AS Success_Message;
