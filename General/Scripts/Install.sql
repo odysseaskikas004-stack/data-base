@@ -19,6 +19,7 @@ SOURCE TABLES/Klines_Table.sql;
 SOURCE TABLES/Vardies.sql;
 SOURCE TABLES/Efhmeries.sql;
 SOURCE TABLES/Iatrikes_Praxeis.sql;
+SOURCE TABLES/Ergasthriakes_Exetaseis.sql;
 SOURCE TABLES/Iatroi_kai_Tmhmata.sql;
 
 SOURCE TABLES/Nosileies.sql;
