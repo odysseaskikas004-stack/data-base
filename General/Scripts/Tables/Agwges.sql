@@ -20,7 +20,7 @@ CREATE TABLE Agwges (
         ON DELETE CASCADE ON UPDATE CASCADE,
 
     CONSTRAINT fk_agwgi_farmako 
-        FOREIGN KEY (kwdikos_farmakoy) REFERENCES Farmaka(kwdikos_farmakoy) 
+        FOREIGN KEY (kwdikos_farmakou) REFERENCES Farmaka(kwdikos_farmakou) 
         ON DELETE RESTRICT ON UPDATE CASCADE,
 
     CONSTRAINT fk_agwgi_nosileia 
