@@ -1,6 +1,6 @@
 CREATE TABLE Kostologisi (
     ID_nosileias INT PRIMARY KEY,          
-    kwdikos_KEN VARCHAR(20),               
+    kοdikos_KEN VARCHAR(20),               
     MSN INT,                                -- Μέση Διάρκεια Νοσηλείας (από το ΚΕΝ)
     paratasi_nosileias INT DEFAULT 0,       
     synoliko_kostos DECIMAL(15, 2),       
@@ -11,7 +11,7 @@ CREATE TABLE Kostologisi (
         ON DELETE CASCADE,
 
     CONSTRAINT fk_kostologisi_ken 
-        FOREIGN KEY (kwdikos_KEN) 
-        REFERENCES KEN(kwdikos_KEN) 
+        FOREIGN KEY (kοdikos_KEN) 
+        REFERENCES KEN(kοdikos_KEN) 
         ON DELETE SET NULL
 ) ENGINE=InnoDB;

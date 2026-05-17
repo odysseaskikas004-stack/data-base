@@ -22,11 +22,11 @@ CREATE TABLE Nosileies (
         ON DELETE RESTRICT,
 
     CONSTRAINT fk_nosileia_icd_in 
-        FOREIGN KEY (diagnosis_eisagwgis) REFERENCES ICD_10(kwdikos_ICD10) 
+        FOREIGN KEY (diagnosis_eisagwgis) REFERENCES ICD_10(kοdikos_ICD10) 
         ON DELETE SET NULL,
 
     CONSTRAINT fk_nosileia_icd_out 
-        FOREIGN KEY (diagnosis_exodou) REFERENCES ICD_10(kwdikos_ICD10) 
+        FOREIGN KEY (diagnosis_exodou) REFERENCES ICD_10(kοdikos_ICD10) 
         ON DELETE SET NULL,
 
     CONSTRAINT fk_nosileia_iatros 

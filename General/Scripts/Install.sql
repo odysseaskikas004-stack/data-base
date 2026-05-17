@@ -1,5 +1,5 @@
 -- Tables
-SET FOREIGN_KEY_CHECKS = 0;
+SET foreign_key_checks = 0;
 
 SOURCE Tables/Atoma_Table.sql;
 SOURCE Tables/As8eneis.sql;
