@@ -9,6 +9,6 @@ CREATE TABLE Tmhmata (
 
     CONSTRAINT fk_tmhma_diey8ynths 
         FOREIGN KEY (amka_diey8ynths) 
-        REFERENCES Prosopiko(amka) 
+        REFERENCES Iatroi(amka) 
         ON DELETE RESTRICT -- Απαγορεύει τη διαγραφή του διευθυντή αν δεν αντικατασταθεί
 ) ENGINE=InnoDB;
