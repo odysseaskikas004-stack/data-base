@@ -1,5 +1,5 @@
 -- Tables
-SET foreign_key_checks = 0;
+SET FOREIGN_KEY_CHECKS = 0;
 
 SOURCE Tables/Atoma_Table.sql;
 SOURCE Tables/As8eneis.sql;
@@ -21,7 +21,6 @@ SOURCE Tables/Efhmeries.sql;
 SOURCE Tables/Iatrikes_Praxeis.sql;
 SOURCE Tables/Ergasthriakes_Exetaseis.sql;
 SOURCE Tables/Iatroi_kai_Tmhmata.sql;
-SOURCE Tables/Epeigonta.sql;
 
 SOURCE Tables/Nosileies.sql;
 SOURCE Tables/Iatroi_Nosileias.sql;
