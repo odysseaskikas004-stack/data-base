@@ -11,14 +11,14 @@ BEGIN
     DECLARE night_streak INT;
     DECLARE conflict_exists INT DEFAULT 0;
 
-    --Ανάκτηση στοιχείων της νέας βάρδιας και του τύπου προσωπικού
+    -- Ανάκτηση στοιχείων της νέας βάρδιας και του τύπου προσωπικού
     SELECT typos_prosopikou INTO v_typos_prosopikou 
     FROM Prosopiko WHERE amka = NEW.amka_prosopikou;
     
     SELECT hmeromhnia, typos_vardias INTO v_curr_date, v_curr_shift 
     FROM Vardies WHERE id_vardias = NEW.id_vardias;
 
-    --ΕΛΕΓΧΟΣ ΜΗΝΙΑΙΟΥ ΟΡΙΟΥ 
+    -- ΕΛΕΓΧΟΣ ΜΗΝΙΑΙΟΥ ΟΡΙΟΥ 
     SELECT COUNT(*) INTO shift_count
     FROM Efhmeries e
     JOIN Vardies v ON e.id_vardias = v.id_vardias
@@ -32,8 +32,6 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Σφάλμα: Υπέρβαση μηνιαίου ορίου βαρδιών.';
     END IF;
 
-    -- 3. ΕΛΕΓΧΟΣ ΑΝΑΠΑΥΣΗΣ 
-    -- Αν η νέα βάρδια είναι Πρωινή, ελέγχουμε αν δούλευε Νυχτερινή την προηγούμενη μέρα
     IF v_curr_shift = 'Πρωινή' THEN
         SELECT COUNT(*) INTO conflict_exists FROM Efhmeries e
         JOIN Vardies v ON e.id_vardias = v.id_vardias
@@ -41,7 +39,6 @@ BEGIN
           AND v.hmeromhnia = DATE_SUB(v_curr_date, INTERVAL 1 DAY) 
           AND v.typos_vardias = 'Νυχτερινή';
     
-    -- Αν η νέα είναι Απογευματινή, ελέγχουμε αν δούλευε Πρωινή την ίδια μέρα
     ELSEIF v_curr_shift = 'Απογευματινή' THEN
         SELECT COUNT(*) INTO conflict_exists FROM Efhmeries e
         JOIN Vardies v ON e.id_vardias = v.id_vardias
@@ -49,7 +46,6 @@ BEGIN
           AND v.hmeromhnia = v_curr_date 
           AND v.typos_vardias = 'Πρωινή';
 
-    -- Αν η νέα είναι Νυχτερινή, ελέγχουμε αν δούλευε Απογευματινή την ίδια μέρα
     ELSEIF v_curr_shift = 'Νυχτερινή' THEN
         SELECT COUNT(*) INTO conflict_exists FROM Efhmeries e
         JOIN Vardies v ON e.id_vardias = v.id_vardias
@@ -62,9 +58,9 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Σφάλμα: Δεν μεσολαβεί το απαιτούμενο 8ωρο ανάπαυσης (συνεχόμενες βάρδιες).';
     END IF;
 
-    --ΕΛΕΓΧΟΣ ΣΥΝΕΧΟΜΕΝΩΝ ΝΥΧΤΕΡΙΝΩΝ (Μax 3)
+    -- ΕΛΕΓΧΟΣ ΣΥΝΕΧΟΜΕΝΩΝ ΝΥΧΤΕΡΙΝΩΝ (Μax 3)
     IF v_curr_shift = 'Νυχτερινή' THEN
-        -- Μετράμε αν είχε νυχτερινή και τις δύο προηγούμενες μέρες
+        
         SELECT COUNT(*) INTO night_streak
         FROM Efhmeries e
         JOIN Vardies v ON e.id_vardias = v.id_vardias
@@ -77,5 +73,6 @@ BEGIN
         END IF;
     END IF;
 
-END; //
+END //
+
 DELIMITER ;
