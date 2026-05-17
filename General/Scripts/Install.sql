@@ -21,6 +21,7 @@ SOURCE Tables/Efhmeries.sql;
 SOURCE Tables/Iatrikes_Praxeis.sql;
 SOURCE Tables/Ergasthriakes_Exetaseis.sql;
 SOURCE Tables/Iatroi_kai_Tmhmata.sql;
+SOURCE Tables/Epeigonta.sql;
 
 SOURCE Tables/Nosileies.sql;
 SOURCE Tables/Iatroi_Nosileias.sql;
