@@ -45,4 +45,5 @@ SOURCE Triggers/Elegxos_gia_Axiologhsh_Iatrou.sql;
 SOURCE Triggers/Elegxos_gia_Axiologhsh_Noshleias.sql;
 
 
+
 SELECT 'Η εγκατάσταση όλων των πινάκων και των Triggers ολοκληρώθηκε!' AS Success_Message;
