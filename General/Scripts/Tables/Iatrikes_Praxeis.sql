@@ -24,9 +24,8 @@ CREATE TABLE Iatrikes_Praxeis (
     CONSTRAINT fk_nosileia_praxi 
         FOREIGN KEY (ID_nosileias) 
         REFERENCES Nosileies(ID_nosileias) 
-        ON DELETE CASCADE
+        ON DELETE CASCADE,
         
     CONSTRAINT chk_katigoria_praxis 
-        CHECK (katigoria IN ('Χειρουργική', 'Διαγνωστική', 'Θεραπευτική')),
-
+        CHECK (katigoria IN ('Χειρουργική', 'Διαγνωστική', 'Θεραπευτική'))
 ) ENGINE=InnoDB;
