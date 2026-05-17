@@ -8,12 +8,12 @@ CREATE TABLE Ergasthriakes_Exetaseis (
     ID_nosileias INT NOT NULL,            
 
 
-    CONSTRAINT fk_praxi_iatros 
+    CONSTRAINT fk_eksetasi_iatros 
         FOREIGN KEY (AMKA) 
         REFERENCES Iatroi(amka) 
         ON DELETE RESTRICT,
 
-    CONSTRAINT fk_nosileia_praxi 
+    CONSTRAINT fk_eksetasi_nosileia 
         FOREIGN KEY (ID_nosileias) 
         REFERENCES Nosileies(ID_nosileias) 
         ON DELETE CASCADE
