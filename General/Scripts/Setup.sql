@@ -1,4 +1,8 @@
 -- Tables
+DROP DATABASE IF EXISTS hospital_db;
+CREATE DATABASE hospital_db;
+USE DATABASE hospital_db;
+
 SET FOREIGN_KEY_CHECKS = 0;
 
 SOURCE Tables/Atoma_Table.sql;
@@ -47,3 +51,5 @@ SOURCE Triggers/Elegxos_gia_Axiologhsh_Noshleias.sql;
 
 
 SELECT 'Η εγκατάσταση όλων των πινάκων και των Triggers ολοκληρώθηκε!' AS Success_Message;
+
+
