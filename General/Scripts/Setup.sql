@@ -1,7 +1,7 @@
 -- Tables
 DROP DATABASE IF EXISTS hospital_db;
 CREATE DATABASE hospital_db;
-USE DATABASE hospital_db;
+USE hospital_db;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
