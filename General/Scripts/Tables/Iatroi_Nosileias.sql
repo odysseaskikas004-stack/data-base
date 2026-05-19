@@ -11,6 +11,6 @@ CREATE TABLE Iatroi_nosileias (
         
     CONSTRAINT fk_in_iatros 
         FOREIGN KEY (AMKA_iatrou) 
-        REFERENCES Iatroi(amka) 
+        REFERENCES Iatroi_Table(amka) 
         ON DELETE CASCADE
 ) ENGINE=InnoDB;

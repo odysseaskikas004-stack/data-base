@@ -16,6 +16,6 @@ CREATE TABLE Eikones (
         ON DELETE SET NULL,
         
     CONSTRAINT fk_eikones_praxis 
-        FOREIGN KEY (ID_praxes) REFERENCES Iatrikas_Praxeis(kwdikos_praxis) 
+        FOREIGN KEY (ID_praxes) REFERENCES Iatrikes_Praxeis(kwdikos_praxis) 
         ON DELETE SET NULL
 ) ENGINE=InnoDB;

@@ -5,8 +5,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS Agwges;
 DROP TABLE IF EXISTS Allergies_As8enwn;
 DROP TABLE IF EXISTS As8eneis;
-DROP TABLE IF EXISTS Atoma;
-DROP TABLE IF EXISTS Axiologisi_latrawn;
+DROP TABLE IF EXISTS Atoma_Table;
+DROP TABLE IF EXISTS Axiologisi_latrwn;
 DROP TABLE IF EXISTS Axiologisi_Nosileias;
 DROP TABLE IF EXISTS Boithoi_Praxeon;
 DROP TABLE IF EXISTS Dioikitiko_Prosopiko_Table;
@@ -14,8 +14,9 @@ DROP TABLE IF EXISTS Drastikes_Ousies;
 DROP TABLE IF EXISTS Efhmeries;
 DROP TABLE IF EXISTS Eikones;
 DROP TABLE IF EXISTS Epeigonta;
+DROP TABLE IF exists Ergasthriakes_Exetaseis;
 DROP TABLE IF EXISTS Farmaka;
-DROP TABLE IF EXISTS `icd-10`;
+DROP TABLE IF EXISTS `ICD-10`;
 DROP TABLE IF EXISTS Iatrikes_Praxeis;
 DROP TABLE IF EXISTS Iatroi_Nosileias;
 DROP TABLE IF EXISTS Iatroi_Table;
@@ -34,7 +35,7 @@ DROP TABLE IF EXISTS Xwroi_Table;
 SET FOREIGN_KEY_CHECKS = 1;
 
 
-CREATE TABLE Atoma (
+CREATE TABLE Atoma_Table (
     onoma VARCHAR(50) NOT NULL,
     eponymo VARCHAR(50) NOT NULL,
     ilikia INT CHECK (ilikia >= 0 AND ilikia <= 120),
@@ -47,7 +48,7 @@ CREATE TABLE Atoma (
         CHECK (typos_atomou IN ('Ιατρός', 'Ασθενής', 'Νοσηλευτής', 'Διοικητικός'))
 ) ENGINE=InnoDB;
 
-CREATE TABLE Prosopiko (
+CREATE TABLE Prosopiko_Table (
     amka CHAR(11) PRIMARY KEY,
     imerominia_proslipsis DATE NOT NULL,
     typos_prosopikou VARCHAR(50) NOT NULL CHECK (typos_prosopikou IN ('Ιατρός', 'Νοσηλευτής', 'Διοικητικό')),	

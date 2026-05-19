@@ -12,7 +12,7 @@ CREATE TABLE Agwges (
     PRIMARY KEY (amka_iatrou, amka_as8eni, kwdikos_farmakou, imerominia_enarxis),
 
     CONSTRAINT fk_agwgi_iatros 
-        FOREIGN KEY (amka_iatrou) REFERENCES Iatroi(amka) 
+        FOREIGN KEY (amka_iatrou) REFERENCES Iatroi_Table(amka) 
         ON DELETE RESTRICT ON UPDATE CASCADE,
 
     CONSTRAINT fk_agwgi_as8enis 

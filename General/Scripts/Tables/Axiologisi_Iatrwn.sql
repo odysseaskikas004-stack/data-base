@@ -13,6 +13,6 @@ CREATE TABLE Axiologisi_Iatrwn (
         
     CONSTRAINT fk_eval_doc_iatros 
         FOREIGN KEY (AMKA_iatrou) 
-        REFERENCES Iatroi(amka) 
+        REFERENCES Iatroi_Table(amka) 
         ON DELETE CASCADE
 ) ENGINE=InnoDB;
