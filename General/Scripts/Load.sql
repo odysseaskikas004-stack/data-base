@@ -2,7 +2,7 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 
-LOAD DATA LOCAL INFILE 'Data/atoma.csv' INTO TABLE atoma 
+LOAD DATA LOCAL INFILE 'Data/atoma.csv' INTO TABLE Atoma 
     FIELDS TERMINATED BY ',' 
     ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' 
@@ -96,6 +96,10 @@ LOAD DATA LOCAL INFILE 'Data/farmaka.csv' INTO TABLE Farmaka
 
 
 LOAD DATA LOCAL INFILE 'Data/synthesi_farmakou.csv' INTO TABLE Synthesi_Farmakou
+    FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
+    LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'Data/dioikitiko.csv' INTO TABLE Dioikitiko_Prosopiko 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
