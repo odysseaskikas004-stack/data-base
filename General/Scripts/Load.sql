@@ -18,7 +18,7 @@ LOAD DATA LOCAL INFILE 'Data/prosopiko.csv' INTO TABLE prosopiko
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/allergies_ashenon.csv' INTO TABLE Allergies_As8enwn --no
+LOAD DATA LOCAL INFILE 'Data/allergies_ashenon.csv' INTO TABLE Allergies_As8enwn 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' 
     IGNORE 1 LINES;
@@ -90,7 +90,7 @@ LOAD DATA LOCAL INFILE 'Data/efhmeries.csv' INTO TABLE Efhmeries
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/farmaka.csv' INTO TABLE Farmaka --alles metavlites
+LOAD DATA LOCAL INFILE 'Data/farmaka.csv' INTO TABLE Farmaka 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
