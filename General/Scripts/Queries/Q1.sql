@@ -1,4 +1,4 @@
--- Q1: Συνολικά έσοδα ανά τμήμα, έτος και ΚΕΝ 
+- - Q1: Συνολικά έσοδα ανά τμήμα, έτος και ΚΕΝ 
 SELECT 
     t.onoma_tmhmatos,
     YEAR(n.imerominia_eisagwgis) AS etos,

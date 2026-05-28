@@ -1,4 +1,4 @@
--- Q3: Ασθενείς με >3 νοσηλείες στο ίδιο τμήμα [cite: 82]
+-- Q3: Ασθενείς με >3 νοσηλείες στο ίδιο τμήμα 
 SELECT 
     at.epwnymo, at.onoma, t.onoma_tmhmatos, 
     COUNT(n.ID_nosileias) AS ari8mos_nosileiwn,
