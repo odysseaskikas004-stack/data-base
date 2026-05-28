@@ -6,7 +6,7 @@ SELECT
     CASE 
         WHEN EXISTS (
             SELECT 1 FROM Efhmeries ef 
-            JOIN Vardies v ON ef.ID_bardias = v.ID_bardias 
+            JOIN Vardies v ON ef.id_vardias = v.id_vardias 
             WHERE ef.AMKA = i.amka AND YEAR(v.imerominia) = YEAR(CURDATE())
         ) THEN 'ΝΑΙ' ELSE 'ΟΧΙ' 
     END AS eixe_efhmeria_fetos,
