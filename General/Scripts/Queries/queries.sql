@@ -14,9 +14,9 @@ SELECT
 FROM Nosileies n
 JOIN Tmhmata t ON n.ID_tmhmatos = t.ID_tmhmatos
 JOIN Kostologisi kos ON n.ID_nosileias = kos.ID_nosileias
-JOIN KEN k ON kos.kodikos_KEN = k.kodikos_KEN
+JOIN KEN k ON kos.kwdikos_KEN = k.kwdikos_KEN
 JOIN As8eneis a ON n.AMKA_astheni = a.amka
-GROUP BY t.onoma_tmhmatos, etos, k.kodikos_KEN, a.asfalistikos_foreas;
+GROUP BY t.onoma_tmhmatos, etos, k.kwdikos_KEN, a.asfalistikos_foreas;
 
 -- Q2: Ιατροί συγκεκριμένης ειδικότητας και επεμβάσεις [cite: 81]
 SELECT 

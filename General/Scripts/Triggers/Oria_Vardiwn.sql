@@ -4,6 +4,7 @@ CREATE TRIGGER trg_check_staff_constraints
 BEFORE INSERT ON Efhmeries
 FOR EACH ROW
 BEGIN
+	IF @skip_triggers IS NULL THEN
     DECLARE v_typos_prosopikou VARCHAR(50);
     DECLARE v_curr_date DATE;
     DECLARE v_curr_shift VARCHAR(20);

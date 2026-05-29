@@ -4,6 +4,7 @@ CREATE TRIGGER trg_check_nosileia_finished_eval_nos
 BEFORE INSERT ON Axiologisi_Nosileias
 FOR EACH ROW
 BEGIN
+	IF @skip_triggers IS NULL THEN
     DECLARE v_exit_date DATE;
 
     -- Ανάκτηση της ημερομηνίας εξόδου από τον πίνακα Nosileies

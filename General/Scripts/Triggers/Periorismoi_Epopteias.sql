@@ -1,6 +1,5 @@
 DELIMITER //
 
--- 1. TRIGGER ΓΙΑ INSERT
 CREATE TRIGGER trg_iatroi_supervision_insert
 BEFORE INSERT ON Iatroi
 FOR EACH ROW
@@ -60,6 +59,7 @@ BEGIN
             SET MESSAGE_TEXT = 'Σφάλμα: Απαγορεύεται η άμεση κυκλική αλυσίδα εποπτείας.';
         END IF;
     END IF;
+END IF;
 END; //
 
 DELIMITER ;
