@@ -42,13 +42,13 @@ SOURCE Tables/Eikones.sql;
 SET FOREIGN_KEY_CHECKS = 1;
 
 -- Triggers
-
+IF @skip_triggers IS NULL THEN
 SOURCE Triggers/Periorismoi_Epopteias.sql;
 SOURCE Triggers/Elegxos_Alergias.sql;
 SOURCE Triggers/Oria_Vardiwn.sql;
 SOURCE Triggers/Elegxos_gia_Axiologhsh_Iatrou.sql;
 SOURCE Triggers/Elegxos_gia_Axiologhsh_Noshleias.sql;
-
+END IF;
 
 
 SELECT 'Η εγκατάσταση όλων των πινάκων και των Triggers ολοκληρώθηκε!' AS Success_Message;
