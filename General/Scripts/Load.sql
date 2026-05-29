@@ -18,10 +18,10 @@ LOAD DATA LOCAL INFILE 'Data/prosopiko.csv' INTO TABLE prosopiko
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/allergies_asthenon.csv' INTO TABLE Allergies_As8enwn 
-    FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
-    LINES TERMINATED BY '\r\n' 
-    IGNORE 1 LINES;
+-- LOAD DATA LOCAL INFILE 'Data/allergies_asthenon.csv' INTO TABLE Allergies_As8enwn 
+--     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
+--     LINES TERMINATED BY '\r\n' 
+--     IGNORE 1 LINES;
 
 LOAD DATA LOCAL INFILE 'Data/iatroi.csv' INTO TABLE Iatroi 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
