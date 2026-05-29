@@ -117,3 +117,4 @@ LOAD DATA LOCAL INFILE 'Data/eikones.csv' INTO TABLE Eikones
 
 SET FOREIGN_KEY_CHECKS = 1;
 SET @skip_triggers = NULL;
+

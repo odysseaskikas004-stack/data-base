@@ -3,6 +3,7 @@ CREATE TRIGGER trg_prevent_allergic_prescription
 BEFORE INSERT ON Agwges
 FOR EACH ROW
 BEGIN
+	IF @skip_triggers IS NULL THEN
     IF EXISTS (
         -- Ψάχνουμε αν υπάρχει κοινή ουσία μεταξύ του φαρμάκου και των αλλεργιών του ασθενή
         SELECT 1 

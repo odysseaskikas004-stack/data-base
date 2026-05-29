@@ -12,6 +12,6 @@ CREATE TABLE Kostologisi (
 
     CONSTRAINT fk_kostologisi_ken 
         FOREIGN KEY (kwdikos_KEN) 
-        REFERENCES KEN(kodikos_KEN) 
+        REFERENCES KEN(kwdikos_KEN) 
         ON DELETE SET NULL
 ) ENGINE=InnoDB;
