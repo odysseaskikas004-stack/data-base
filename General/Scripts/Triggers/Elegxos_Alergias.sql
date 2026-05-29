@@ -8,7 +8,7 @@ BEGIN
         SELECT 1 
         FROM Synthesi_Farmakou sf
         JOIN Allergies_As8enwn aa ON sf.ID_ousias = aa.id_ousias
-        WHERE sf.kodikos_farmakou = NEW.kwdikos_farmakou
+        WHERE sf.kwdikos_farmakou = NEW.kwdikos_farmakou
           AND aa.amka = NEW.amka_as8eni
     ) THEN
         SIGNAL SQLSTATE '45000'
