@@ -18,7 +18,7 @@ LOAD DATA LOCAL INFILE 'Data/prosopiko.csv' INTO TABLE prosopiko
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/allergies_ashenon.csv' INTO TABLE Allergies_As8enwn 
+LOAD DATA LOCAL INFILE 'Data/allergies_asthenon.csv' INTO TABLE Allergies_As8enwn 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' 
     IGNORE 1 LINES;
@@ -37,7 +37,7 @@ LOAD DATA LOCAL INFILE 'Data/vardies.csv' INTO TABLE Vardies
 
 --IATROI KAI TMHMATA CSV?
 
-LOAD DATA LOCAL INFILE 'Data/wroi.csv' INTO TABLE Xwroi_Ai8ouses --EMPTY
+LOAD DATA LOCAL INFILE 'Data/wroi.csv' INTO TABLE Xwroi_Ai8ouses 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
@@ -45,7 +45,7 @@ LOAD DATA LOCAL INFILE 'Data/klines.csv' INTO TABLE Klines
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/icd_10.csv' INTO TABLE ICD_10 --EMPTY
+LOAD DATA LOCAL INFILE 'Data/icd_10.csv' INTO TABLE ICD_10 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
@@ -57,7 +57,7 @@ LOAD DATA LOCAL INFILE 'Data/axiologisi_iatrwn.csv' INTO TABLE Axiologisi_Iatrwn
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/axiologisi_noshleias.csv' INTO TABLE Axiologisi_Nosileias --allo onoma metavlitwn
+LOAD DATA LOCAL INFILE 'Data/axiologisi_noshleias.csv' INTO TABLE Axiologisi_Nosileias 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
@@ -73,7 +73,7 @@ LOAD DATA LOCAL INFILE 'Data/boithoi_praxeon.csv' INTO TABLE Boithoi_Praxeon
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE 'Data/iatrikes_prakseis.csv' INTO TABLE Iatrikes_Praxeis --EMPTY
+LOAD DATA LOCAL INFILE 'Data/iatrikes_prakseis.csv' INTO TABLE Iatrikes_Praxeis 
     FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
