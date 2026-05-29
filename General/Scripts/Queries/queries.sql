@@ -33,7 +33,7 @@ SELECT
     COUNT(ip.kwdikos_praxis) AS count_kyrios_xeirourgos
 FROM Iatroi i
 JOIN Atoma at ON i.amka = at.AMKA
-LEFT JOIN Iatrikas_Praxeis ip ON i.amka = ip.AMKA 
+LEFT JOIN Iatrikes_Praxeis ip ON i.amka = ip.AMKA 
 WHERE i.eidikotita = 'Χειρουργική' -- Παράδειγμα ειδικότητας
 GROUP BY i.amka;
 
@@ -56,8 +56,8 @@ SELECT
     AVG(ai.poiothta_iatrikhs_frontidas) AS avg_rating_iatrou,
     AVG(an.synolikh_empeiria) AS avg_genikh_entypwsh
 FROM Iatroi i
-LEFT JOIN Axiologiseis_Iatrou ai ON i.amka = ai.AMKA_iatrou
-LEFT JOIN Axiologiseis_Nosileias an ON ai.ID_nosileias = an.ID_nosileias
+LEFT JOIN Axiologisi_Iatrwn ai ON i.amka = ai.AMKA_iatrou
+LEFT JOIN Axiologisi_Nosileias an ON ai.ID_nosileias = an.ID_nosileias
 WHERE i.amka = '12345678901' -- Παράδειγμα AMKA
 GROUP BY i.amka;
 
@@ -67,7 +67,7 @@ SELECT
     COUNT(ip.kwdikos_praxis) AS synolo_epembasewn
 FROM Iatroi i
 JOIN Atoma at ON i.amka = at.AMKA
-JOIN Iatrikas_Praxeis ip ON i.amka = ip.AMKA
+JOIN Iatrikes_Praxeis ip ON i.amka = ip.AMKA
 WHERE at.hlikia < 35 AND ip.katigoria = 'χειρουργική'
 GROUP BY i.amka
 ORDER BY synolo_epembasewn DESC;
@@ -77,7 +77,7 @@ ORDER BY synolo_epembasewn DESC;
 SELECT 
     n.ID_nosileias, n.imerominia_eisagwgis, n.diagnosis_exodou,
     k.synoliko_kostos,
-    (SELECT AVG(synolikh_empeiria) FROM Axiologiseis_Nosileias WHERE ID_nosileias = n.ID_nosileias) AS avg_rating
+    (SELECT AVG(synolikh_empeiria) FROM Axiologisi_Nosileias WHERE ID_nosileias = n.ID_nosileias) AS avg_rating
 FROM Nosileies n
 JOIN Kostologisi k ON n.ID_nosileias = k.ID_nosileias
 WHERE n.AMKA_astheni = '09876543210'; -- Παράδειγμα AMKA
@@ -158,12 +158,12 @@ FROM Nosileies
 GROUP BY diagnosis_eisagwgis, etos
 HAVING count_cases >= 5; -- χρειαζεται περαιτέρω join για σύγκριση ετών
 
--- Q15: Κατανομή περιστατικών triage και χρόνος αναμονής
+-- Q15: Κατανομή επειγόντων και χρόνος αναμονής
 SELECT 
     epipedo_epeigontos,
     COUNT(*) AS synolo_peristatikwn,
     AVG(TIMESTAMPDIFF(MINUTE, imerominia_afixis, imerominia_exetashs)) AS avg_wait_minutes,
     (SUM(CASE WHEN paraphmpth_gia_nosileia = 1 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS pososto_nosileias
-FROM Triage
+FROM Epeigonta
 GROUP BY epipedo_epeigontos;
 -- C:\Users\odyss\OneDrive\Έγγραφα\GitHub\data-base\General\Scripts\Queries\queries.sql
