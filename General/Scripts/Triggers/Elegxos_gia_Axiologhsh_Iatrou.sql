@@ -4,7 +4,6 @@ CREATE TRIGGER trg_check_nosileia_finished_eval_docs
 BEFORE INSERT ON Axiologisi_Iatrwn
 FOR EACH ROW
 BEGIN
-	IF @skip_triggers IS NULL THEN
     DECLARE v_exit_date DATE;
 	DECLARE v_participation_count INT;
 
@@ -33,6 +32,7 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Σφάλμα: Μπορείτε να αξιολογήσετε μόνο γιατρούς που συμμετείχαν στη φροντίδα σας.';
     END IF;
+
 END; //
 
 DELIMITER ;

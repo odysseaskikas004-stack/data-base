@@ -59,7 +59,7 @@ BEGIN
             SET MESSAGE_TEXT = 'Σφάλμα: Απαγορεύεται η άμεση κυκλική αλυσίδα εποπτείας.';
         END IF;
     END IF;
-END IF;
+
 END; //
 
 DELIMITER ;
