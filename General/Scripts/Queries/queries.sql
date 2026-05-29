@@ -166,4 +166,4 @@ SELECT
     (SUM(CASE WHEN paraphmpth_gia_nosileia = 1 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS pososto_nosileias
 FROM Triage
 GROUP BY epipedo_epeigontos;
--- C:\Users\odyss\OneDrive\Έγγραφα\GitHub\data-base\General\Scripts\queries.sql
+-- C:\Users\odyss\OneDrive\Έγγραφα\GitHub\data-base\General\Scripts\Queries\queries.sql
