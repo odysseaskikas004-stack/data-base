@@ -42,6 +42,7 @@ SOURCE Tables/Eikones.sql;
 SET FOREIGN_KEY_CHECKS = 1;
 
 -- Triggers
+IF @skip_triggers IS NULL THEN
 SOURCE Triggers/Periorismoi_Epopteias.sql;
 SOURCE Triggers/Elegxos_Alergias.sql;
 SOURCE Triggers/Oria_Vardiwn.sql;

@@ -1,6 +1,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
+SET @skip_triggers = 1;
 
 LOAD DATA LOCAL INFILE 'Data/atoma.csv' INTO TABLE Atoma 
     FIELDS TERMINATED BY ',' 
@@ -116,3 +116,4 @@ LOAD DATA LOCAL INFILE 'Data/eikones.csv' INTO TABLE Eikones
     LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 SET FOREIGN_KEY_CHECKS = 1;
+SET @skip_triggers = NULL;
